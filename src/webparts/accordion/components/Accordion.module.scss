@@ -1,0 +1,100 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.accordion {
+  overflow: hidden;
+  //padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+  width: 100%;
+}
+
+.richTextContainer {
+  .ms-Dropdown-container{
+        margin-left: 170px !important;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+.item {
+  border-bottom: 1px solid var(--neutralLight);
+}
+
+.header {
+  width: 100%;
+  background: var(--bodyBackground);
+  color: #00678f;
+  //padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.header:hover {
+  background: var(--neutralLighter);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.panel {
+  max-height: 0;
+  overflow: visible;
+  transition: max-height 0.35s ease;
+}
+
+.open {
+  max-height: 1000px;
+  overflow: visible;
+  //padding: 10px;  
+}
+
+.divider {
+  height: 1px;
+  background: #c8c6c4;
+  margin-bottom: 1px 0;
+}
+
+.itemHighlight {
+  background-color: #e8f4f8;
+  border-left: 4px solid #00678f;
+}
+
+/* Mobile First */
+@media (min-width: 768px) {
+  .header {
+    font-size: 1.1rem;
+  }
+}

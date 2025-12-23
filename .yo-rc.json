@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.21.1",
+    "sdksVersions": {},
+    "version": "1.22.1",
+    "libraryName": "tmp-sghs",
+    "libraryId": "48b35dd7-9ae6-4653-b09f-b3387268fb2e",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "TMP-SGHS",
+    "solutionShortDescription": "TMP-SGHS description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

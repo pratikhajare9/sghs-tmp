@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "tmp-sghs-client-side-solution",
+    "id": "48b35dd7-9ae6-4653-b09f-b3387268fb2e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "TMP-SGHS description"
+      },
+      "longDescription": {
+        "default": "TMP-SGHS description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "tmp-sghs Feature",
+        "description": "The feature that activates elements of the tmp-sghs solution.",
+        "id": "80e87249-1c36-454a-b337-a1c8984a01e6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/tmp-sghs.sppkg"
+  }
+}
