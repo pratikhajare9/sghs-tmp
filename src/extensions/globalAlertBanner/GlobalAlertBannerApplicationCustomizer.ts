@@ -26,10 +26,10 @@ export default class GlobalAlertBannerApplicationCustomizer
     if (!alert) return;
 
     // Dismiss per session + per alert
-    if (sessionStorage.getItem(`global-alert-${alert.Id}`)) return;
+    if (sessionStorage.getItem(`global-alert-${alert.Id}-${new Date(alert.Modified).getTime()}`)) return;
 
     placeholder.domElement.innerHTML = this.renderBanner(alert);
-    this.bindDismiss(alert.Id);
+    this.bindDismiss(alert);
 
     return Promise.resolve();
   }
@@ -40,7 +40,7 @@ export default class GlobalAlertBannerApplicationCustomizer
     const items = await this.sp.web.lists
       .getByTitle("Global Alerts")
       .items
-      .select("Id", "Title", "AlertBody", "Severity", "LearnMoreUrl")
+      .select("Id", "Title", "AlertBody", "Severity", "Modified")
       .filter(`
         IsActive eq 1
       `)
@@ -103,9 +103,9 @@ export default class GlobalAlertBannerApplicationCustomizer
     `;
   }
 
-  private bindDismiss(alertId: number): void {
+  private bindDismiss(alert: any): void {
     document.getElementById("dismissAlert")?.addEventListener("click", () => {
-      sessionStorage.setItem(`global-alert-${alertId}`, "true");
+      sessionStorage.setItem(`global-alert-${alert.Id}-${new Date(alert.Modified).getTime()}`, "true");
       location.reload();
     });
   }
