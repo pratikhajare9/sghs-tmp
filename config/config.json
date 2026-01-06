@@ -9,11 +9,20 @@
           "manifest": "./src/webparts/accordion/AccordionWebPart.manifest.json"
         }
       ]
+    },
+    "global-alert-banner-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/globalAlertBanner/GlobalAlertBannerApplicationCustomizer.js",
+          "manifest": "./src/extensions/globalAlertBanner/GlobalAlertBannerApplicationCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "AccordionWebPartStrings": "lib/webparts/accordion/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "GlobalAlertBannerApplicationCustomizerStrings": "lib/extensions/globalAlertBanner/loc/{locale}.js"
   }
 }

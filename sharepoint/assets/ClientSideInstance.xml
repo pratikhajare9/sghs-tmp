@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="GlobalAlertBanner"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="df15261f-0b0b-4ba8-83b2-18cc9ed1fedf"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
