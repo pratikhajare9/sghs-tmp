@@ -41,9 +41,8 @@ export default class GlobalAlertBannerApplicationCustomizer
       .getByTitle("Global Alerts")
       .items
       .select("Id", "Title", "AlertBody", "Severity", "Modified")
-      .filter(`
-        IsActive eq 1
-      `)
+      .filter(`IsActive eq 1`)
+      .orderBy("Modified", false)
       .top(1)();
 
     return items.length ? items[0] : null;
@@ -106,7 +105,7 @@ export default class GlobalAlertBannerApplicationCustomizer
   private bindDismiss(alert: any): void {
     document.getElementById("dismissAlert")?.addEventListener("click", () => {
       sessionStorage.setItem(`global-alert-${alert.Id}-${new Date(alert.Modified).getTime()}`, "true");
-      location.reload();
+      document.getElementById("globalAlertBanner")?.remove();
     });
   }
 }
